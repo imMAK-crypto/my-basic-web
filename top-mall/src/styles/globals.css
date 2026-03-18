@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap');
+
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, #root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0a0608;
+  color: #f0ece6;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Show text cursor on inputs */
+input, textarea, select {
+  cursor: text !important;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-accent {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0608;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8956c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8c9a0;
+}
+
+/* Glass Morphism */
+.glass {
+  background: rgba(200, 149, 108, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 149, 108, 0.1);
+}
+
+/* Gradient Backgrounds */
+.gradient-blush {
+  background: linear-gradient(135deg, #f5ddd5 0%, #e8c9a0 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #0a0608 0%, #1a1215 100%);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(90deg, #c8956c, #e8c9a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-gradient {
+  border-image: linear-gradient(90deg, #c8956c, #e8c9a0) 1;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Large displays */
+@media (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
